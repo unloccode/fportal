@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';s
+import React from 'react';
+
 import './App.css';
 
-function App() {
-  return (
-    <div>
-      <h1>Fportal</h1>
-    </div>
-  );
+class App extends React.Component{
+  render(){
+    //some awesome code
+  }
 }
 
 export default App;
