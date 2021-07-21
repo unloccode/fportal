@@ -78,9 +78,26 @@ export default class Register extends React.Component{
                             <input type="text" className="form-control" name="email" valuee={this.state.email} onChange={this.onChangeEmail} />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="username">Username</label>
-                            <input type="text" className="form-control" name="username" valuee={this.state.username} onChange={this.onChangeUsername} />
+                            <label htmlFor="password">Password</label>
+                            <input type="text" className="form-control" name="password" valuee={this.state.password} onChange={this.onChangePassword} />
                         </div>
+                        <div className="form-group">
+                            <button className="btn btn-primary btn-block">Sign Up</button>
+                        </div>
+                        {this.state.message && (
+                            <div className="form-group">
+                                <div
+                                    className={
+                                        this.state.successful
+                                        ? "alert alert-success"
+                                        : "alert alert-danger"
+                                    }
+                                    role="alert"
+                                >
+                                    {this.state.message}
+                                </div>
+                            </div>
+                        )}
                     </form>
                 </div>
             </div>
