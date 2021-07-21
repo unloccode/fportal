@@ -22,15 +22,15 @@ class App extends React.Component{
     };
   }
   componentDidMount(){
-    //const user = AuthService.getCurrentUser();
-    //console.log(user);
-    //if(user){
-    //  this.setState({
-    //    currentUser: user,
-    //    showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
-    //    showAdminBoard: user.roles.includes("ROLE_ADMIN"),
-    //  });
-    //}
+    const user = AuthService.getCurrentUser();
+    console.log(user);
+    if(user){
+      this.setState({
+        currentUser: user,
+        showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
+        showAdminBoard: user.roles.includes("ROLE_ADMIN"),
+      });
+    }
   }
   logOut(){
     AuthService.logout();
