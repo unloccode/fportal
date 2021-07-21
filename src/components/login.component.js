@@ -75,11 +75,8 @@ export default class Login extends React.Component{
                             />
                         </div>
                         <div className="form-group">
-                            <button className="btn btn-primary btn-block" disabled={this.state.loading}>
-                                {this.state.loading && (
-                                    <span className="spinner-border spinner-border-sm"></span>
-                                )}
-                                <span>Login</span>
+                            <button className="btn btn-primary btn-block">
+                                Login
                             </button>
                         </div>
                     </form>

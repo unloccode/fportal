@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
-import AuthService from '../services/auth.service.js';
+import AuthService from "./services/auth.service.js";
 
-import Login from '../components/login.component.js';
-import Profile from '../components/profile.component.js';
+import Login from './components/login.component';
+import Profile from './components/profile.component';
 
 
 class App extends React.Component{
@@ -22,14 +22,15 @@ class App extends React.Component{
     };
   }
   componentDidMount(){
-    const user = AuthService.getCurrentUser();
-    if(user){
-      this.setState({
-        currentUser: user,
-        showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
-        showAdminBoard: user.roles.includes("ROLE_ADMIN"),
-      });
-    }
+    //const user = AuthService.getCurrentUser();
+    //console.log(user);
+    //if(user){
+    //  this.setState({
+    //    currentUser: user,
+    //    showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
+    //    showAdminBoard: user.roles.includes("ROLE_ADMIN"),
+    //  });
+    //}
   }
   logOut(){
     AuthService.logout();
@@ -47,7 +48,7 @@ class App extends React.Component{
                 <Link to={"/mod"} className="nav-link">Moderator Board</Link>
               </li>
             )}
-            {showModeratorBoard && (
+            {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/admin"} className="nav-link">Admin Board</Link>
               </li>
