@@ -22,7 +22,7 @@ class AuthService{
             username,
             email,
             password
-        });
+        })
     }
     getCurrentUser(){
         return JSON.parse(localStorage.getItem("user"));
